@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/yourAnswer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Your Answer"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Submit Answer"
+            app:layout_constraintEnd_toEndOf="@+id/yourAnswer"
+            app:layout_constraintStart_toStartOf="@+id/yourAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/yourAnswer" />
+
+        <TextView
+            android:id="@+id/txtAngka1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="28dp"
+            android:text="a"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/yourAnswer"
+            app:layout_constraintStart_toStartOf="@+id/yourAnswer" />
+
+        <TextView
+            android:id="@+id/txtAngka2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="28dp"
+            android:text="b"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/yourAnswer"
+            app:layout_constraintEnd_toEndOf="@+id/yourAnswer" />
+
+        <TextView
+            android:id="@+id/txtOperator"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="28dp"
+            android:freezesText="false"
+            android:text="+"
+            android:textAlignment="center"
+            android:textIsSelectable="false"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/yourAnswer"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="168dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
